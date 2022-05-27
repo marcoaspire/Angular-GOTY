@@ -1,0 +1,23 @@
+<h2 class="pt-4">Game of the year</h2>
+<hr>
+
+<div class="row"
+*ngIf="loading"
+>
+<div class="col-12">
+    <div class="alert alert-info text-center">
+        <h4 class="alert-heading">
+            Loading...
+        </h4>
+        <i class="fa fa-spin fa-refresh fa-2x"></i>
+        <p class="mb-0">Wait a moment, please</p>
+    </div>
+</div>
+</div>
+
+
+<div class="col" *ngIf="!loading">
+    <div class="row">
+        <app-horizontal-bar-graph [barChartData]="productoData"></app-horizontal-bar-graph>
+    </div>
+</div>
